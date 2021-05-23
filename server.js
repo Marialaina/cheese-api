@@ -20,11 +20,6 @@ mongoose.connect(MONGODB_URL, {
     useNewUrlParser: true,
 });
 
-//MIDDLEWARE
-app.use(cors());
-app.use(morgan("dev"));
-app.use(express.json());
-
 // connection event
 mongoose.connection
 .on("open", () => console.log("You're connected to mongoose"))
